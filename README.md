@@ -1,4 +1,4 @@
-# Mini Shop - [демонстрация](m1arsen.github.io/mini-shop)
+# Mini Shop - [демонстрация](https://m1arsen.github.io/mini-shop)
 
 Одностраничный сайт блока небольшого магазина.
 
