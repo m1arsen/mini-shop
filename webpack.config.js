@@ -58,7 +58,6 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              // Указываем использование нового API
               implementation: require('sass'),
             },
           },
