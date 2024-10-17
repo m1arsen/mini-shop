@@ -7,7 +7,9 @@
     "start": "webpack serve",
     "build-dev": "webpack",
     "build-prod": "webpack --node-env=production",
-    "clear": "rd /s /q dist"
+    "clear": "rd /s /q dist",
+    "predeploy": "npm run build-prod",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,7 @@
     "babel-loader": "^9.2.1",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.2.0",
     "group-css-media-queries-loader": "^4.3.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
