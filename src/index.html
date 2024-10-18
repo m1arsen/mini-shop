@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <title>Mini Shop</title>
   </head>
@@ -112,57 +113,60 @@
           </div>
         </div>
 
-        <div class="products__vertical-block">
-          <div class="products__vertical-card">
-            <div class="slide__header">
-              <img src="./img/popcorn.jpg" alt="Попкорн" class="card__image" />
+        <div class="swiper__container">
+          <div class="products__vertical-block">
+            <div class="products__vertical-card">
+              <div class="slide__header">
+                <img src="./img/popcorn.jpg" alt="Попкорн" class="card__image" />
 
-              <div class="card__badges">
-                <p class="card__tag">Товар дня</p>
-                <p class="card__discount">-29%</p>
+                <div class="card__badges">
+                  <p class="card__tag">Товар дня</p>
+                  <p class="card__discount">-29%</p>
+                </div>
+
+                <div class="card__controllers">
+                  <button class="card__like-btn">
+                    <img src="./img/likeIcon.svg" alt="like" />
+                  </button>
+                  <button class="card__hide-btn">
+                    <img src="./img/hideIcon.svg" alt="hide" />
+                  </button>
+                </div>
               </div>
 
-              <div class="card__controllers">
-                <button class="card__like-btn">
-                  <img src="./img/likeIcon.svg" alt="like" />
-                </button>
-                <button class="card__hide-btn">
-                  <img src="./img/hideIcon.svg" alt="hide" />
-                </button>
-              </div>
-            </div>
-
-            <div class="slide__footer">
-              <h2 class="slide__title">Попкорн солёный, для СВЧ-печи, 120 г</h2>
-              <div class="slide__btn-container">
-                <h3 class="slide__price">160 ₽</h3>
-                <button class="bidBtn">Оставить заявку</button>
-              </div>
-            </div>
-          </div>
-          <div class="products__vertical-card">
-            <div class="slide__header">
-              <img src="./img/eskimo.jpg" alt="Эскимо" class="card__image" />
-
-              <div class="card__badges">
-                <p class="card__tag">Хит</p>
-              </div>
-
-              <div class="card__controllers">
-                <button class="card__like-btn">
-                  <img src="./img/likeIcon.svg" alt="like" />
-                </button>
-                <button class="card__hide-btn">
-                  <img src="./img/hideIcon.svg" alt="hide" />
-                </button>
+              <div class="slide__footer">
+                <h2 class="slide__title">Попкорн солёный, для СВЧ-печи, 120 г</h2>
+                <div class="slide__btn-container">
+                  <h3 class="slide__price">160 ₽</h3>
+                  <button class="bidBtn">Оставить заявку</button>
+                </div>
               </div>
             </div>
 
-            <div class="slide__footer">
-              <h2 class="slide__title">Эскимо с малиной, 150 г</h2>
-              <div class="slide__btn-container">
-                <h3 class="slide__price">190 ₽</h3>
-                <button class="bidBtn">Оставить заявку</button>
+            <div class="products__vertical-card">
+              <div class="slide__header">
+                <img src="./img/eskimo.jpg" alt="Эскимо" class="card__image" />
+
+                <div class="card__badges">
+                  <p class="card__tag">Хит</p>
+                </div>
+
+                <div class="card__controllers">
+                  <button class="card__like-btn">
+                    <img src="./img/likeIcon.svg" alt="like" />
+                  </button>
+                  <button class="card__hide-btn">
+                    <img src="./img/hideIcon.svg" alt="hide" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="slide__footer">
+                <h2 class="slide__title">Эскимо с малиной, 150 г</h2>
+                <div class="slide__btn-container">
+                  <h3 class="slide__price">190 ₽</h3>
+                  <button class="bidBtn">Оставить заявку</button>
+                </div>
               </div>
             </div>
           </div>
@@ -180,5 +184,6 @@
     </div>
 
     <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

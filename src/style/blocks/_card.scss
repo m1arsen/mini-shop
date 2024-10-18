@@ -14,6 +14,7 @@
   }
 
   &__controllers {
+    // margin-right: 12px;
     display: flex;
     row-gap: 5px;
     flex-direction: column;
@@ -22,8 +23,11 @@
 
   &__like-btn,
   &__hide-btn {
-    width: 19px;
-    height: 19px;
+    padding: 0;
+    img {
+      width: 19px;
+      height: 19px;
+    }
   }
 
   &__footer {
