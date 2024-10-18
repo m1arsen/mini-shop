@@ -1,0 +1,79 @@
+.card {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative; // чтобы быть выше затемнения
+    z-index: 2;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &__controllers {
+    display: flex;
+    row-gap: 5px;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  &__like-btn,
+  &__hide-btn {
+    width: 19px;
+    height: 19px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    position: relative; // чтобы быть выше затемнения
+    z-index: 2;
+  }
+
+  &__badges {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+  }
+
+  &__discount,
+  &__tag {
+    padding: 0 10px;
+    width: min-content;
+
+    font-size: 12px;
+    line-height: 23px;
+    white-space: nowrap;
+
+    border-radius: 20px;
+    background-color: black;
+  }
+
+  &__btn-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}

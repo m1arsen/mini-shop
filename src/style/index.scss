@@ -1,4 +1,12 @@
-@use '~normalize.css' as *;
+// Base
 @use './base/fonts';
 @use './base/var';
+@use './base/reset';
 @use './base/style';
+
+// Blocks
+@use './blocks/main';
+@use './blocks/products';
+@use './blocks/card';
+@use './blocks/bidBtn';
+@use './blocks/slide';

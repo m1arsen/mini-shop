@@ -1,0 +1,88 @@
+.products {
+  padding: 0 16px;
+
+  background-color: #f2f2f2;
+  color: #fff;
+
+  &__container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  // Блоки для карточек
+
+  &__horizontal-block {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  &__vertical-block {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Карточки
+
+  &__single-card,
+  &__horizontal-card {
+    padding: 12px;
+
+    border-radius: 5px;
+    overflow: hidden;
+
+    position: relative;
+  }
+
+  &__single-card,
+  &__horizontal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__single-card {
+    height: 328px;
+  }
+
+  &__horizontal-card {
+    height: 154px;
+  }
+
+  // Затемнение
+
+  &__single-card,
+  &__horizontal-card {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 77px; // высота градиента
+      z-index: 1;
+    }
+
+    &::before {
+      top: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); // градиент сверху
+    }
+
+    &::after {
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent); // градиент снизу
+    }
+  }
+
+  &__vertical-card {
+    border-radius: 5px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
