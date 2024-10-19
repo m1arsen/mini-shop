@@ -14,7 +14,6 @@
   }
 
   &__controllers {
-    // margin-right: 12px;
     display: flex;
     row-gap: 5px;
     flex-direction: column;
@@ -27,6 +26,12 @@
     img {
       width: 19px;
       height: 19px;
+    }
+
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: scale(1.05);
     }
   }
 
@@ -46,6 +51,7 @@
     position: absolute;
     bottom: 12px;
     left: 12px;
+    z-index: 2;
   }
 
   &__discount,

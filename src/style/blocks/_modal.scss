@@ -1,0 +1,85 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+
+  display: none;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__dialog {
+    width: 100%;
+    max-width: 387px;
+    padding: 12px;
+
+    background-color: #fff;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__header {
+    margin-bottom: 31px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+  }
+
+  &__closeBtn {
+    padding: 0;
+  }
+
+  &__main {
+    margin-bottom: 24px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  &__input {
+    padding: 10px 12px;
+    border: 1px solid #e6e6e6;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      gap: 4px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__checkbox {
+    color: #444444;
+    font-size: 8px;
+    font-weight: 500;
+  }
+}
+
+.show {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}

@@ -102,8 +102,6 @@ tagsOnSite.forEach((tagHtml) => {
   });
 });
 
-discountsOnSite.forEach((d) => console.log(d.textContent.slice(1, -1)));
-
 discountsOnSite.forEach((discountHtml) => {
   discounts.forEach((discount) => {
     const limitValues = discount.percent.split('-').map((str) => Number(str));
@@ -112,6 +110,54 @@ discountsOnSite.forEach((discountHtml) => {
     if (discountHtmlValue >= limitValues[0] && discountHtmlValue <= limitValues[1]) {
       discountHtml.style.backgroundColor = discount.color;
     }
-    console.log(limitValues);
+  });
+});
+
+// Модальное окно с формой
+
+const modal = document.querySelector('.modal');
+const openBtns = document.querySelectorAll('[data-modal]');
+
+function openModal() {
+  modal.classList.add('show');
+  modal.classList.remove('hide');
+  document.body.style.overflow = 'hidden';
+  // document.body.style.paddingRight = '15px';
+}
+
+function closeModal() {
+  modal.classList.add('hide');
+  modal.classList.remove('show');
+  document.body.style.overflow = '';
+  // document.body.style.paddingRight = '0';
+}
+
+openBtns.forEach((btn) => {
+  btn.addEventListener('click', openModal);
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target == modal || e.target.getAttribute('data-close') == '') closeModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'Escape' && modal.classList.contains('show')) closeModal();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('dataForm');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name');
+    const phone = document.getElementById('phone');
+    const consent = document.getElementById('consent');
+
+    console.log('Имя:', name.value);
+    console.log('Телефон:', phone.value);
+    console.log('Согласие на обработку персональных данных:', consent.checked);
+
+    form.reset();
   });
 });

@@ -45,7 +45,7 @@
             <div class="card__footer">
               <div class="card__btn-container">
                 <h3 class="card__price">570 ₽</h3>
-                <button class="bidBtn">Оставить заявку</button>
+                <button data-modal class="bidBtn">Оставить заявку</button>
               </div>
             </div>
 
@@ -75,7 +75,7 @@
             <div class="card__footer">
               <div class="card__btn-container">
                 <h3 class="card__price">140 ₽</h3>
-                <button class="bidBtn">Оставить заявку</button>
+                <button data-modal class="bidBtn">Оставить заявку</button>
               </div>
             </div>
 
@@ -103,7 +103,7 @@
             <div class="card__footer">
               <div class="card__btn-container">
                 <h3 class="card__price">140 ₽</h3>
-                <button class="bidBtn">Оставить заявку</button>
+                <button data-modal class="bidBtn">Оставить заявку</button>
               </div>
             </div>
 
@@ -138,7 +138,7 @@
                 <h2 class="slide__title">Попкорн солёный, для СВЧ-печи, 120 г</h2>
                 <div class="slide__btn-container">
                   <h3 class="slide__price">160 ₽</h3>
-                  <button class="bidBtn">Оставить заявку</button>
+                  <button data-modal class="bidBtn">Оставить заявку</button>
                 </div>
               </div>
             </div>
@@ -165,7 +165,7 @@
                 <h2 class="slide__title">Эскимо с малиной, 150 г</h2>
                 <div class="slide__btn-container">
                   <h3 class="slide__price">190 ₽</h3>
-                  <button class="bidBtn">Оставить заявку</button>
+                  <button data-modal class="bidBtn">Оставить заявку</button>
                 </div>
               </div>
             </div>
@@ -173,6 +173,50 @@
         </div>
       </div>
     </section>
+
+    <div class="modal">
+      <div class="modal__dialog">
+        <div class="modal__content">
+          <div class="modal__header">
+            <h1 class="modal__title">Оставьте заявку</h1>
+            <button class="modal__closeBtn">
+              <img data-close src="./img/closeIcon.svg" alt="Close" />
+            </button>
+          </div>
+
+          <form id="dataForm">
+            <div class="modal__main">
+              <input
+                type="text"
+                id="name"
+                placeholder="Ваше имя *"
+                name="name"
+                class="modal__input"
+                required
+              />
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Номер телефона *"
+                name="phone"
+                class="modal__input"
+                required
+              />
+            </div>
+
+            <div class="modal__footer">
+              <div>
+                <input type="checkbox" id="consent" name="consent" required />
+                <label for="consent" class="modal__checkbox">
+                  Согласие на обработку персональных данных
+                </label>
+              </div>
+              <button type="submit" class="modal__submitBtn bidBtn">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- YouTube LightBox -->
     <div id="youtubelightbox" class="youtubelightbox">
