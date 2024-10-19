@@ -5,10 +5,13 @@
 
     position: relative;
     overflow: hidden;
-    // background: center / cover no-repeat url('../../img/popcorn.jpg');
 
     display: flex;
     justify-content: flex-end;
+
+    &:hover .card__image {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
 
     & .card__badges {
       top: 12px;
