@@ -9,4 +9,10 @@
   border-radius: 5px;
   background-color: #18c576;
   white-space: nowrap;
+
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: #13a563;
+  }
 }

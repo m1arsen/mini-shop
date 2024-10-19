@@ -97,3 +97,9 @@ body {
   height: 100%;
   max-width: 1200px;
 }
+
+@media (max-width: 800px) {
+  .container {
+    padding: 40px 0;
+  }
+}

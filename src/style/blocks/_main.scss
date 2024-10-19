@@ -68,3 +68,9 @@
     height: 14px;
   }
 }
+
+@media (max-width: 720px) {
+  .main {
+    padding: 0 20px;
+  }
+}

@@ -6,6 +6,8 @@ import 'swiper/swiper-bundle.css';
 import Swiper from 'swiper';
 import { Pagination } from 'swiper/modules';
 
+// Слайдер
+
 const swiperContainer = document.querySelector('.swiper__container');
 const swiperWrapper = document.querySelector('.products__vertical-block');
 const swiperSlides = document.querySelectorAll('.products__vertical-card');
@@ -60,3 +62,56 @@ checkScreenWidth();
 
 // Проверка при изменении размера окна
 window.addEventListener('resize', checkScreenWidth);
+
+// Беджики к карточкам
+
+const tags = [
+  {
+    name: 'Товар дня',
+    color: '#FFA726',
+  },
+  {
+    name: 'Хит',
+    color: '#AC59F1',
+  },
+  {
+    name: 'Распродажа',
+    color: '#39B0F4',
+  },
+];
+
+const discounts = [
+  {
+    percent: '0-30',
+    color: '#18C576',
+  },
+  {
+    percent: '30-90',
+    color: '#FF5BC6',
+  },
+];
+
+const tagsOnSite = document.querySelectorAll('.card__tag');
+const discountsOnSite = document.querySelectorAll('.card__discount');
+
+tagsOnSite.forEach((tagHtml) => {
+  tags.forEach((tag) => {
+    if (tag.name === tagHtml.textContent) {
+      tagHtml.style.backgroundColor = tag.color;
+    }
+  });
+});
+
+discountsOnSite.forEach((d) => console.log(d.textContent.slice(1, -1)));
+
+discountsOnSite.forEach((discountHtml) => {
+  discounts.forEach((discount) => {
+    const limitValues = discount.percent.split('-').map((str) => Number(str));
+    const discountHtmlValue = Number(discountHtml.textContent.slice(1, -1));
+
+    if (discountHtmlValue >= limitValues[0] && discountHtmlValue <= limitValues[1]) {
+      discountHtml.style.backgroundColor = discount.color;
+    }
+    console.log(limitValues);
+  });
+});
